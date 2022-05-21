@@ -46,4 +46,4 @@ Get pyrogram (p)  `SESSION` buradan:
 - 
 - İnstagram [@ama_hocaam](https://instagram.com/ama_hocaam?igshid=YmMyMTA2M2Y=)
 
-Kaynak repo [LEVİNA](https://github.com/levina-lab)
+- Kaynak repo [LEVİNA](https://github.com/levina-lab)
