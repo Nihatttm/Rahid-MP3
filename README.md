@@ -1,5 +1,3 @@
-### TEST AŞAMASINDA
-
 <h2 align="centre">Muud Music Mp3 Video Oynatıcı 🎵</h2>
 
 ### Güncellendi aktif.... 
@@ -14,7 +12,7 @@
 - `/ara` - video indirir
 - `/lyrics` - şarkı sözlerini bulur
 - `/izlet`  - video oynatır
-- `/voynat ( ʟɪɴᴋ )` - radio ve film canlı akışları oynatırgibi ʀᴀᴅɪᴏ ᴠᴇ ғɪʟᴍ ɢɪʙɪ  ᴄᴀɴʟɪ ᴀᴋɪsʟᴀʀɪ ᴏʏɴᴀᴛ
+- `/voynat ( link )` - radio ve film canlı akışları oynatır 
 #### Yalnızca yöneticiler 
 - `/durdur` - şarkı çalmayı duraklatma 
 - `/devam` - şarkı çalmaya devam et 
@@ -25,16 +23,16 @@
 #### Grubunuza Almak için.. 
 - `/katil` - Müzik asistanı  grubunuza katılır. 
 #### Owner İçin...
-- `/broadcast` -  ʏᴀʏɪɴ ʏᴀᴘᴍᴀᴋ !
-- `/gban` - ᴋᴜʀᴇsᴇʟ ʏᴀsᴀᴋʟᴀᴍᴀ !
-- `/ungban` - ᴋᴜʀᴇsᴇʟ ʏᴀsᴀᴋ ᴋᴀʟᴅɪʀᴍᴀ !
-- `/info` - ʙᴏᴛᴜɴ ʙɪʟɢɪʟᴇʀɪɴɪ ᴏɢʀᴇɴ !
-- `/restart` - ʙᴏᴛᴜ ʏᴇɴɪᴅᴇɴ ʙᴀsʟᴀᴛ !
-- `/update` - ʙᴏᴛᴜ ɢᴜɴᴄᴇʟʟᴇ !
-- `/hiz` - ʙᴏᴛᴜɴ ʜɪᴢɪɴɪ ᴏɢʀᴇɴ !
-- `/ping` - ᴘɪɴɢ ᴅᴜʀᴜᴍᴜɴᴜ ɢᴏsᴛᴇʀɪʀ !
-- `/uptime` - ᴄᴀɴʟɪ ʙɪʟɢɪʟᴇʀɪ ɢᴏsᴛᴇʀɪʀ !
-- `/alive` - ʙᴏᴛᴜɴ ᴄᴀʟɪsᴍᴀ ᴅᴜʀᴜᴍᴜɴᴜ ɢᴏsᴛᴇʀɪʀ !
+- `/broadcast` -  yayın yapmak !
+- `/gban` - küresel yasaklama !
+- `/ungban` - küresel yasak kaldırma !
+- `/info` - botun bilgilerini öğrenin !
+- `/restart` - botu yeniden başlat !
+- `/update` - botu güncelle !
+- `/hiz` - botun hızını öğren !
+- `/ping` - ping durumunu gösterir !
+- `/uptime` - canlı bilgileri gösterir !
+- `/alive` - botun çalışma bilgilerini gösterir !
 <h4>🔺 Herokuya Dağıt 🔻</h4>
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/amahocam/muudvideo)
