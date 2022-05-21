@@ -1,7 +1,7 @@
 {
-    "name": "Video x Music Stream Bot",
-    "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by PyTgCalls and Pyrogram",
-    "logo": "https://telegra.ph/file/1c41ded2dd871eb36bd7e.png",
+    "name": "MuudcVideo x Music Bot",
+    "description": "Video ve Müzik Akışı için Telegram botu",
+    "logo": "https://telegra.ph//file/4c86190fcbe14428c8c6b.jpg",
     "keywords": [
         "py-tgcalls",
         "telegram bot",
@@ -16,66 +16,66 @@
     "success_url": "https://t.me/Richard_Ramirezz",
     "env": {
         "API_ID": {
-            "description": "your API_ID from my.telegram.org",
+            "description": "My.telegram'dan uygulama apı-hash.org/apps",
             "required": true
         },
         "API_HASH": {
-            "description": "your API_HASH from my.telegram.org",
+            "description": "My.telegram'dan uygulama apı-hash.org/apps",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "your bot token from @BotFather",
+            "description": "Bir bot belirteci @botfather ile alınız",
             "required": true
         },
         "BOT_USERNAME": {
-            "description": "fill with your bot username from @BotFather but without using '@' symbol",
+            "description": "Müzik Oynatıcı Bot Kullanıcı İsmi @ olmadan yazınız.",
             "required": true
         },
         "BOT_NAME": {
-            "description": "fill with your bot name from @BotFather",
+            "description": "Müzik Oynatıcı Bot Adınız.",
             "required": true
         },
         "ASSISTANT_NAME": {
-            "description": "fill with the assistant username account without @",
+            "description": "Assistan kullanıcı adı @ olmadan yazınız.",
             "required": true
         },
         "SESSION_NAME": {
-            "description": "fill with the pyrogram String Session",
+            "description": "Pyrogram oturum dizesi (Replit.com)",
             "required": true
         },
         "MONGODB_URL": {
-            "description": "fill with the mongodb url you created from cloud.mongodb.com (tutorial about how to make it, find it on @VeezSupportGroup)",
+            "description": "Mongodb url si mongodb.com sitesinden alabilirsiniz.",
             "required": true
         },
         "SUDO_USERS": {
-            "description": "list of user id to be added to sudo member list, or just fill with your id",
+            "description": "sudo üye listesine eklenecek kullanıcı kimliği listesi veya sadece id doldurun",
             "required": true,
-            "value": "1757169682"
+            "value": "5128216420"
         },
         "UPSTREAM_REPO": {
-            "description": "This is needed for update feature, if you deployed forked repo put your forked repo link here, if not just leave it as it",
+            "description": "Bu, güncelleme özelliği için gereklidir, eğer çatallı repo dağıttıysanız, olduğu gibi bırakmazsanız, çatallı repo bağlantınızı buraya koyun",
             "required": true,
             "value": "https://github.com/amahocam/new"
         },
         "GROUP_SUPPORT": {
-            "description": "if you have group, then fill the group username here without @",
+            "description": "Grup kullanıcı adı @ olmadan yazınız.",
             "required": true,
             "value": "mutsuz_panda"
         },
         "UPDATES_CHANNEL": {
-            "description": "if you have channel, then fill the channel username here without @",
+            "description": "Kanal kullanıcı adı @ olmadan yazınız.",
             "required": true,
             "value": "Richard_Ramirezzblog"
         },
         "OWNER_NAME": {
-            "description": "fill with your telegram account username without @",
+            "description": "Kendi kullanıcı adınız @ olmadan yazınız",
             "required": true,
-            "value": "Richard_Ramirezz"
+            "value": "mutsuz_panda"
         },
         "ALIVE_NAME": {
-            "description": "fill with your telegram account nickname/name",
+            "description": "telgraf hesabınızın takma adı/adıyla doldurun",
             "required": true,
-            "value": "Levina"
+            "value": "Moon lyrcs"
         }
     },
     "addons": [],
