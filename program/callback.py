@@ -193,14 +193,14 @@ async def cbsudo(_, query: CallbackQuery):
 async def cbmenu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Only admin with manage video chat permission that can tap this button !", show_alert=True)
+        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
     chat_id = query.message.chat.id
     user_id = query.message.from_user.id
     buttons = menu_markup(user_id)
     chat = query.message.chat.title
     if chat_id in QUEUE:
           await query.edit_message_text(
-              f"⚙️ **Settings of** {chat}\n\n⏸ : pause stream\n▶️ : resume stream\n🔇 : mute userbot\n🔊 : unmute userbot\n⏹ : stop stream",
+              f"⚙️ **Settings of** {chat}\n\n⏸ : akışı duraklat\n▶️ : akışı devam ettir\n🔇 : asistanı sessize al\n🔊 : asistanın sesini aç\n⏹ : akışı durdur",
               reply_markup=InlineKeyboardMarkup(buttons),
           )
     else:
