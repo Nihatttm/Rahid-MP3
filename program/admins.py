@@ -62,7 +62,7 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ **ᴀᴛʟᴀɴᴅɪ** sᴏɴʀᴀᴋɪ ᴘᴀʀᴄᴀ .\n\n📝 **ɪsɪᴍ:** [{op[0]}]({op[1]})\n💬 **ɢʀᴜʙ:** `{chat_id}`\n📒 **ᴛᴀʟᴇᴘ:** {requester}",
+                caption=f"⏭ **ᴀᴛʟᴀɴᴅɪ** sᴏɴʀᴀᴋɪ ᴘᴀʀᴄᴀ .\n\🏷 **ɪsɪᴍ:** [{op[0]}]({op[1]})\n💬 **ɢʀᴜʙ:** `{chat_id}`\n🎧 **ᴛᴀʟᴇᴘ:** {requester}",
             )
     else:
         skip = m.text.split(None, 1)[1]
