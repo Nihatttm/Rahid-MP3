@@ -12,7 +12,7 @@
         "pyrogram"
     ],
     "website": "https://t.me/mutsuz_panda",
-    "repository": "https://github.com/amahocam/video",
+    "repository": "https://github.com/amahocam/muudvideo",
     "success_url": "https://t.me/Richard_Ramirezz",
     "env": {
         "API_ID": {
@@ -55,7 +55,7 @@
         "UPSTREAM_REPO": {
             "description": "Bu, güncelleme özelliği için gereklidir, eğer çatallı repo dağıttıysanız, olduğu gibi bırakmazsanız, çatallı repo bağlantınızı buraya koyun",
             "required": true,
-            "value": "https://github.com/amahocam/new"
+            "value": "https://github.com/amahocam/muudvideo"
         },
         "GROUP_SUPPORT": {
             "description": "Grup kullanıcı adı @ olmadan yazınız.",
