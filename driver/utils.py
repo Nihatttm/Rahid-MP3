@@ -120,7 +120,7 @@ async def stream_end_handler(_, u: Update):
         else:
             await bot.send_message(
                 chat_id,
-                f"⏩ **sᴏɴʀᴀᴋɪ ᴘᴀʀᴄᴀʏᴀ ᴀᴛʟᴀɴᴅɪ**\n\n📝 **ɪsɪᴍ:** [{op[0]}]({op[1]}) | `{op[2]}`\n💬 **ɢʀᴜʙ:** `{chat_id}`",
+                f"⏩ **sᴏɴʀᴀᴋɪ ᴘᴀʀᴄᴀʏᴀ ᴀᴛʟᴀɴᴅɪ**\n\n🏷 **ɪsɪᴍ:** [{op[0]}]({op[1]}) | `{op[2]}`\n💬 **ɢʀᴜʙ:** `{chat_id}`",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
