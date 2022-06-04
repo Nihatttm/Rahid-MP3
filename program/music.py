@@ -54,7 +54,7 @@ async def play(c: Client, m: Message):
     user_id = m.from_user.id
     if m.sender_chat:
         return await m.reply_text(
-            "sen bir __Anonim__ kullanıcısısın !\n\n» bu botu kullanmak için gerçek kullanıcı hesabınıza geri dönün."
+            "Sən __Anonim__ istifadəçisən !\n\n» bu botu istifadə üçün anonim yetkinizi bağlayın."
         )
     try:
         aing = await c.get_me()
@@ -63,25 +63,25 @@ async def play(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"● ʙᴇɴɪ ᴋᴜʟʟᴀɴᴍᴀᴋ ɪᴄɪɴ ᴀssᴀɢɪᴅᴀᴋɪ ʏᴇᴛᴋɪʟᴇʀɪ ᴠᴇʀᴍᴇɴɪᴢ ɢᴇʀᴇᴋɪʀ . . ! **ɪᴢɪɴʟᴇʀ**:\n\n» ᴍᴇsᴀᴊʟᴀʀɪ sɪʟᴍᴇ \n» ʙᴀɢʟᴀɴᴛɪ ɪʟᴇ ᴅᴀᴠᴇᴛ ᴇᴛᴍᴇ\n» sᴇsʟɪ sᴏʜʙᴇᴛʟᴇʀɪ ʏᴏɴᴇᴛᴍᴇ\n\nʙɪᴛᴛɪɢɪɴᴅᴇ /reload ʏᴀᴢɪɴ . . !"
+            f"● Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisiniz . . ! **icazələr**:\n\n» Mesajları silmək \n» Bağlantı ilə dəvət etmək\n» Səsli söhbətləri yönəltmək\n\nyetkiləri verdikdən sonra /reload yazın . . !"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "💡 ʙᴇɴɪ ᴋᴜʟʟᴀɴᴍᴀᴋ ɪᴄɪɴ ᴀssᴀɢɪᴅᴀᴋɪ ʏᴇᴛᴋɪʟᴇʀɪ ᴠᴇʀᴍᴇɴɪᴢ ɢᴇʀᴇᴋɪʀ :"
-            + "\n\n» sᴇsʟɪ sᴏʜʙᴇᴛʟᴇʀɪ ʏᴏɴᴇᴛᴍᴇ ."
+            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
+            + "\n\n» Səsli söhbətləri yönəltmək ."
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "💡 ʙᴇɴɪ ᴋᴜʟʟᴀɴᴍᴀᴋ ɪᴄɪɴ ᴀssᴀɢɪᴅᴀᴋɪ ʏᴇᴛᴋɪʟᴇʀɪ ᴠᴇʀᴍᴇɴɪᴢ ɢᴇʀᴇᴋɪʀ :"
-            + "\n\n» ᴍᴇsᴀᴊʟᴀʀɪ sɪʟᴍᴇ ."
+            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
+            + "\n\n» Mesajları silmə ."
         )
         return
     if not a.can_invite_users:
         await m.reply_text(
-            "💡 ʙᴇɴɪ ᴋᴜʟʟᴀɴᴍᴀᴋ ɪᴄɪɴ ᴀssᴀɢɪᴅᴀᴋɪ ʏᴇᴛᴋɪʟᴇʀɪ ᴠᴇʀᴍᴇɴɪᴢ ɢᴇʀᴇᴋɪʀ :"
-            + "\n\n» ʙᴀɢʟᴀɴᴛɪ ɪʟᴇ ᴅᴀᴠᴇᴛ ᴇᴛᴍᴇ ."
+            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
+            + "\n\n» Bağlantı ilə dəvət etmək ."
         )
         return
     try:
@@ -107,11 +107,11 @@ async def play(c: Client, m: Message):
             pass
         except Exception as e:
             return await m.reply_text(
-                f"❌ **ᴀsɪsᴛᴀɴ ᴋᴀᴛɪʟᴀᴍᴀᴅɪ !**\n\n**reason**: `{e}`"
+                f"❌ **Asistan qoşula bilmədi!**\n\n**reason**: `{e}`"
             )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("🔎 **ɪɴᴅɪʀɪʟɪʏᴏʀ...**")
+            suhu = await replied.reply("🔎 **Yüklənir...**")
             dl = await replied.download()
             link = replied.link
             
@@ -140,7 +140,7 @@ async def play(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"⏩ **ᴘᴀʀᴄᴀ sɪʀᴀʏᴀ ᴇᴋʟᴇɴᴅɪ »** `{pos}`\n\n📝 **ɪsɪᴍ:** [{songname}]({link}) | `music`\n⌚ **sᴜʀᴇ:** `{duration}`\n📒 **ᴛᴀʟᴇᴘ:** {requester}",
+                    caption=f"⏩ **Hissə sıraya əlavə olundu »** `{pos}`\n\n📝 **Ad:** [{songname}]({link}) | `music`\n⌚ **Müddət:** `{duration}`\n📒 **İstəyən:** {requester}",
                 )
             else:
                 try:
@@ -150,7 +150,7 @@ async def play(c: Client, m: Message):
                     userid = m.from_user.id
                     thumbnail = f"{IMG_5}"
                     image = await thumb(thumbnail, title, userid, ctitle)
-                    await suhu.edit("📥 **ʏᴜᴋʟᴇɴɪʏᴏʀ ...**")
+                    await suhu.edit("📥 **Yüklənir...**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioPiped(
@@ -168,22 +168,22 @@ async def play(c: Client, m: Message):
                     await m.reply_photo(
                         photo=image,
                         reply_markup=InlineKeyboardMarkup(buttons),
-                        caption=f"🏷 **ɪsɪᴍ:** [{songname}]({link}) | `music`\n💬 **ɢʀᴜʙ:** `{chat_id}`\n🎧 **ᴛᴀʟᴇᴘ:** {requester}",
+                        caption=f"🏷 **Ad({link}) | `music`\n💬 **Qrup:** `{chat_id}`\n🎧 **İstəyən:** {requester}",
                     )
                 except Exception as e:
                     await suhu.delete()
-                    await m.reply_text(f"🚫 ʜᴀᴛᴀ:\n\n» {e}")
+                    await m.reply_text(f"🚫 Xəta:\n\n» {e}")
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "» ʙᴀɴᴀ sᴀʀᴋɪ ᴀᴅɪ ᴠᴇʏᴀ sᴇs ᴅᴏsʏᴀsɪ ᴠᴇʀɪɴ .**"
+                    "» Əsas mahnının adını və ya audio faylını verin .**"
                 )
             else:
-                suhu = await c.send_message(chat_id, "🔍 **ᴀʀᴀɴɪʏᴏʀ ...**")
+                suhu = await c.send_message(chat_id, "🔍 **Axtarılır...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await suhu.edit("❌ **sᴏɴᴜᴄ ʙᴜʟᴜɴᴀᴍᴀᴅɪ .**")
+                    await suhu.edit("❌ **Nəticə tapılmadı .**")
                 else:
                     songname = search[0]
                     title = search[0]
@@ -196,7 +196,7 @@ async def play(c: Client, m: Message):
                     image = await thumb(thumbnail, title, userid, ctitle)
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
-                        await suhu.edit(f"❌ yt-dl sorunları algılandı\n\n» `{ytlink}`")
+                        await suhu.edit(f"❌ yt-dl problemlər aşkar edilib\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
                             pos = add_to_queue(
@@ -208,11 +208,11 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"⏩ **ᴘᴀʀᴄᴀ sɪʀᴀʏᴀ ᴇᴋʟᴇɴᴅɪ »** `{pos}`\n\n📝 **ɪsɪᴍ:** [{songname}]({url}) | `music`\n**⌚ sᴜʀᴇ:** `{duration}`\n📒 **ᴛᴀʟᴇᴘ:** {requester}",
+                                caption=f"⏩ **Hissə sıraya əlavə olundu »** `{pos}`\n\n📝 **Ad:** [{songname}]({url}) | `music`\n**⌚ Müddət** `{duration}`\n📒 **İstəyən:** {requester}",
                             )
                         else:
                             try:
-                                await suhu.edit("📥 **ʏᴜᴋʟᴇɴɪʏᴏʀ ...**")
+                                await suhu.edit("📥 **Yüklənir...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -230,7 +230,7 @@ async def play(c: Client, m: Message):
                                 await m.reply_photo(
                                     photo=image,
                                     reply_markup=InlineKeyboardMarkup(buttons),
-                                    caption=f"🏷 **ɪsɪᴍ:** [{songname}]({url}) | `music`\n**⌚ sᴜʀᴇ:** `{duration}`\n🎧 **ᴛᴀʟᴇᴘ:** {requester}",
+                                    caption=f"🏷 **Ad:** [{songname}]({url}) | `music`\n**⌚ Müddət:** `{duration}`\n🎧 **İstəyən:** {requester}",
                                 )
                             except Exception as ep:
                                 await suhu.delete()
@@ -239,14 +239,14 @@ async def play(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» ʙᴀɴᴀ sᴀʀᴋɪ ᴀᴅɪ ᴠᴇʏᴀ sᴇs ᴅᴏsʏᴀsɪ ᴠᴇʀɪɴ .**"
+                "» Mənə mahnının adını və ya audio faylını verin .**"
             )
         else:
-            suhu = await c.send_message(chat_id, "🔍 **ᴀʀᴀɴɪʏᴏʀ...**")
+            suhu = await c.send_message(chat_id, "🔍 **Axtarılır...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await suhu.edit("❌ **sᴏɴᴜᴄ ʙᴜʟᴜɴᴀᴍᴀᴅɪ ...**")
+                await suhu.edit("❌ **Nəticə tapılmadı...**")
             else:
                 songname = search[0]
                 title = search[0]
@@ -259,7 +259,7 @@ async def play(c: Client, m: Message):
                 image = await thumb(thumbnail, title, userid, ctitle)
                 veez, ytlink = await ytdl(url)
                 if veez == 0:
-                    await suhu.edit(f"❌ yt-dl sorunları algılandı\n\n» `{ytlink}`")
+                    await suhu.edit(f"❌ yt-dl problemlər aşkar edilib\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
@@ -269,11 +269,11 @@ async def play(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=InlineKeyboardMarkup(buttons),
-                            caption=f"⏩ **ᴘᴀʀᴄᴀ ʟɪsᴛᴇʏᴇ ᴇᴋʟᴇɴᴅɪ »** `{pos}`\n\n📝 **ɪsɪᴍ:** [{songname}]({url}) | `music`\n**⌚ sᴜʀᴇ:** `{duration}`\n📒 **ᴛᴀʟᴇᴘ:** {requester}",
+                            caption=f"⏩ **Hissə siyahıya əlavə edildi »** `{pos}`\n\n📝 **Ad:** [{songname}]({url}) | `music`\n**⌚ Müddət:** `{duration}`\n📒 **İstəyən:** {requester}",
                         )
                     else:
                         try:
-                            await suhu.edit("📥 **ʏᴜᴋʟᴇɴɪʏᴏʀ ...**")
+                            await suhu.edit("📥 **Yüklənir...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -289,8 +289,8 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"🏷 **ɪsɪᴍ:** [{songname}]({url}) | `music`\n**⌚ sᴜʀᴇ:** `{duration}`\n🎧 **ᴛᴀʟᴇᴘ:** {requester}",
+                                caption=f"🏷 **Ad:** [{songname}]({url}) | `music`\n**⌚ Müddət:** `{duration}`\n🎧 **İstəyən:** {requester}",
                             )
                         except Exception as ep:
                             await suhu.delete()
-                            await m.reply_text(f"🚫 ʜᴀᴛᴀ: `{ep}`")
+                            await m.reply_text(f"🚫 Xəta: `{ep}`")
