@@ -62,7 +62,7 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ **Atlandı** Növbəti mahnı .\n\🏷 **AD:** [{op[0]}]({op[1]})\n💬 **Qrup:** `{chat_id}`\n🎧 **Sorğu:** {requester}",
+                caption=f"⏭ **Atlandı** Növbəti mahnı .\n\🏷 **Ad:** [{op[0]}]({op[1]})\n💬 **Qrup:** `{chat_id}`\n🎧 **Sorğu:** {requester}",
             )
     else:
         skip = m.text.split(None, 1)[1]
@@ -243,7 +243,7 @@ async def cbmute(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **ᴇʀᴏʀ:**\n\n`{e}`", reply_markup=close_mark)
     else:
-        await query.answer("❌ Hal-hazırda heçbir şey yayımlanamır", show_alert=True)
+        await query.answer("❌ Hal-hazırda heçbir şey yayımlanmır", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbunmute"))
