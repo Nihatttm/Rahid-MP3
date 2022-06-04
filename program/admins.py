@@ -31,7 +31,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bᴏᴛ **ʏᴇɴɪᴅᴇɴ ʙᴀsʟᴀᴛɪʟᴅɪ !**\n✅ **ᴀᴅᴍɪɴ ʟɪsᴛᴇsɪ ɢᴜɴᴄᴇʟʟᴇɴᴅɪ !**"
+        "✅ Bot**Yenidən başladıldı !**\n✅ **Admin siyahısı yeniləndi !**"
     )
 
 
@@ -44,11 +44,11 @@ async def skip(c: Client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await c.send_message(chat_id, "**sᴜ ᴀɴᴅᴀ ʜɪᴄʙɪʀ sᴇʏ ᴄᴀʟᴍɪʏᴏʀ !**")
+            await c.send_message(chat_id, "**indi heç nə oxunmur !**")
         elif op == 1:
-            await c.send_message(chat_id, "» **sɪʀᴀᴅᴀ ʙᴀsᴋᴀ sᴀʀᴋɪ ʏᴏᴋ .**\n**sᴇsʟɪ sᴏʜʙᴇᴛᴛᴇɴ ᴀʏʀɪʟɪʏᴏʀᴜᴍ .**")
+            await c.send_message(chat_id, "» **Növbəti mahnı yoxdur .**\n**Mən səsli çatı tərk edirəm.**")
         elif op == 2:
-            await c.send_message(chat_id, "🗑️ **sɪʀᴀʏɪ ᴛᴇᴍɪᴢʟᴇᴍᴇ**\n**• ɢᴏʀᴜɴᴛᴜʟᴜ sᴏʜʙᴇᴛᴛᴇɴ ᴀʏʀɪʟɪʏᴏʀᴜᴍ.**")
+            await c.send_message(chat_id,  "**Botu**\n**• Səsli söhbətdən ayrılıram.**")
         else:
             buttons = stream_markup(user_id)
             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -62,11 +62,11 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ **ᴀᴛʟᴀɴᴅɪ** sᴏɴʀᴀᴋɪ ᴘᴀʀᴄᴀ .\n\🏷 **ɪsɪᴍ:** [{op[0]}]({op[1]})\n💬 **ɢʀᴜʙ:** `{chat_id}`\n🎧 **ᴛᴀʟᴇᴘ:** {requester}",
+                caption=f"⏭ **Atlandı** Növbəti mahnı .\n\🏷 **AD:** [{op[0]}]({op[1]})\n💬 **Qrup:** `{chat_id}`\n🎧 **Sorğu:** {requester}",
             )
     else:
         skip = m.text.split(None, 1)[1]
-        OP = "🗑 **sᴀʀᴋɪ ᴋᴜʏʀᴜᴋᴛᴀɴ ᴋᴀʟᴅɪʀɪʟᴅɪ:**"
+        OP = "🗑 **Mahnı növbədən dayandırıldı:**"
         if chat_id in QUEUE:
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
@@ -93,11 +93,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ sᴇsʟɪ sᴏʜʙᴇᴛᴛᴇɴ ᴀʏʀɪʟɪʏᴏʀᴜᴍ .")
+            await m.reply("✅ Səsli söhbəti tərk edirəm.")
         except Exception as e:
-            await m.reply(f"🚫 **ʜᴀᴛᴀ:**\n\n`{e}`")
+            await m.reply(f"🚫 **Xəta:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ʜɪᴄʙɪʀ sᴇʏ ᴄᴀʟᴍɪʏᴏʀ**")
+        await m.reply("❌ **Heç nə oxunmur**")
 
 
 @Client.on_message(
@@ -110,12 +110,12 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                "⏸ **ᴘᴀʀᴄᴀ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ .**\n\n• **sᴜʀᴅᴜʀᴍᴇᴋ ɪᴄɪɴ **\n» /devam ʏᴀᴢɪɴ ."
+                "⏸ **Trek dayandırıldı .**\n\n• **Davam etmək üçün**\n» /devam yazın."
             )
         except Exception as e:
-            await m.reply(f"🚫 **ʜᴀᴛᴀ:**\n\n`{e}`")
+            await m.reply(f"🚫 **Xəta:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ʜɪᴄʙɪʀ sᴇʏ ᴄᴀʟᴍɪʏᴏʀ**")
+        await m.reply("❌ **Heç bir mahnı oxunmur**")
 
 
 @Client.on_message(
@@ -128,12 +128,12 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▶️ **ᴘᴀʀᴄᴀ ᴅᴇᴠᴀᴍ ᴇᴛɪʀɪʟᴅɪ .**\n\n• **ᴅᴜʀᴅᴜʀᴍᴀᴋ ɪᴄɪɴ**\n» /durdur ʏᴀᴢɪɴ ."
+                "▶️ **Mahnı davam edildi.**\n\n• **Mahnı dayandırmaq üçün**\n» /durdur yazın."
             )
         except Exception as e:
-            await m.reply(f"🚫 **ʜᴀᴛᴀ:**\n\n`{e}`")
+            await m.reply(f"🚫 **Xəta:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ʜɪᴄ ʙɪʀ sᴇʏ ᴄᴀʟᴍɪʏᴏʀ**")
+        await m.reply("❌ **Heç bir mahnı oxunmur**")
 
 
 @Client.on_message(
@@ -146,12 +146,12 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **Kullanıcı botunun sesi kapatıldı.**\n\n• **Userbot'un sesini açmak için şunu kullanın:**\n» /unmute komut."
+                "🔇 **İstifadəçi botun səsi bağlandı.**\n\n• **Userbot istifadənin səsin açmaq üçün:**\n» /unmute."
             )
         except Exception as e:
-            await m.reply(f"🚫 **ʜᴀᴛᴀ:**\n\n`{e}`")
+            await m.reply(f"🚫 **Xəta:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ʜɪᴄ ʙɪʀsᴇʏ ᴄᴀʟᴍɪʏᴏʀ**")
+        await m.reply("❌ **Heç bir mahnı oxunmur**")
 
 
 @Client.on_message(
@@ -164,105 +164,105 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "🔊 **Kullanıcı botunun sesi açıldı.**\n\n• **Userbot'un sesini kapatmak için**\n» /mute."
+                "🔊 **İstifadəçi botunun səsi işə salındı.**\n\n• **Userbotun səsini söndürmək üçün**\n» /mute."
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ʜɪᴄ ʙɪʀsᴇʏ ᴄᴀʟᴍɪʏᴏʀ**")
+        await m.reply("❌ **Heç bir mahnı oxunmur**")
 
 
 @Client.on_callback_query(filters.regex("cbpause"))
 async def cbpause(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
             await call_py.pause_stream(chat_id)
             await query.answer("streaming paused")
             await query.edit_message_text(
-                "⏸ ᴀᴋɪs ᴅᴜʀᴅᴜʀᴜʟᴅᴜ", reply_markup=back_mark
+                "⏸ Yayım dayandırıldı", reply_markup=back_mark
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **ᴇʀᴏʀ:**\n\n`{e}`", reply_markup=close_mark)
     else:
-        await query.answer("❌ sᴜ ᴀɴᴅᴀ ʜɪᴄʙɪʀ sᴇʏ ʏᴀʏɪɴʟᴀɴᴍɪʏᴏʀ", show_alert=True)
+        await query.answer("❌ Hal-hazırda heçbir səs yayımlanmır", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbresume"))
 async def cbresume(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
             await call_py.resume_stream(chat_id)
             await query.answer("streaming resumed")
             await query.edit_message_text(
-                "▶️ ᴀᴋɪs ʏᴇɴɪᴅᴇɴ ʙᴀsʟᴀᴛɪʟᴅɪ", reply_markup=back_mark
+                "▶️ Yayım yenidən başladı", reply_markup=back_mark
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **ᴇʀᴏʀ:**\n\n`{e}`", reply_markup=close_mark)
     else:
-        await query.answer("❌ sᴜ ᴀɴᴅᴀ ʜɪᴄʙɪʀ sᴇʏ ʏᴀʏɪɴʟᴀɴᴍɪʏᴏʀ", show_alert=True)
+        await query.answer("❌ Hal-hazırda heçbir səs yayımlanmır", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbstop"))
 async def cbstop(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await query.edit_message_text("✅ **ʙᴜ ᴀᴋɪs sᴏɴᴀ ᴇʀᴅɪ**", reply_markup=close_mark)
+            await query.edit_message_text("✅ **Bu yayım bitdi*", reply_markup=close_mark)
         except Exception as e:
             await query.edit_message_text(f"🚫 **ᴇʀᴏʀ:**\n\n`{e}`", reply_markup=close_mark)
     else:
-        await query.answer("❌ sᴜ ᴀɴᴅᴀ ʜɪᴄʙɪʀ sᴇʏ ʏᴀʏɪɴʟᴀɴᴍɪʏᴏʀ", show_alert=True)
+        await query.answer("❌ Hal-hazırda heçbir səs yayımlanmır", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbmute"))
 async def cbmute(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
             await call_py.mute_stream(chat_id)
             await query.answer("streaming muted")
             await query.edit_message_text(
-                "🔇 userbot başarıyla kapatıldı", reply_markup=back_mark
+                "🔇 userbot uğurla bağlandı", reply_markup=back_mark
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **ᴇʀᴏʀ:**\n\n`{e}`", reply_markup=close_mark)
     else:
-        await query.answer("❌ sᴜ ᴀɴᴅᴀ ʜɪᴄʙɪʀ sᴇʏ ʏᴀʏɪɴʟᴀɴᴍɪʏᴏʀ", show_alert=True)
+        await query.answer("❌ Hal-hazırda heçbir şey yayımlanamır", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbunmute"))
 async def cbunmute(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
             await call_py.unmute_stream(chat_id)
             await query.answer("streaming unmuted")
             await query.edit_message_text(
-                "🔊 userbot başarıyla açıldı", reply_markup=back_mark
+                "🔊 userbot uğurla açıldı", reply_markup=back_mark
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **ʜᴀᴛᴀ:**\n\n`{e}`", reply_markup=close_mark)
     else:
-        await query.answer("❌ sᴜ ᴀɴᴅᴀ ʜɪᴄʙɪʀ sᴇʏ ʏᴀʏɪɴʟᴀɴᴍɪʏᴏʀ", show_alert=True)
+        await query.answer("❌ Hal-hazırda heçbir şey yayımlanmı", show_alert=True)
 
 
 @Client.on_message(
@@ -276,9 +276,9 @@ async def change_volume(client, m: Message):
         try:
             await call_py.change_volume_call(chat_id, volume=int(range))
             await m.reply(
-                f"✅ **sᴇs sᴇᴠɪʏᴇsɪ** `{range}`%"
+                f"✅ **Səs səviyyəsi** `{range}`%"
             )
         except Exception as e:
-            await m.reply(f"🚫 **ʜᴀᴛᴀ:**\n\n`{e}`")
+            await m.reply(f"🚫 **Xəta:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ᴀᴋɪsᴛᴀ ʜɪᴄʙɪʀ sᴇʏ ʏᴏᴋ**")
+        await m.reply("❌ **Yayımda heç nə yoxdur**")
