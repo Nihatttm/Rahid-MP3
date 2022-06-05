@@ -34,7 +34,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
-                    InlineKeyboardButton("💝 Sahibim", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -120,7 +120,7 @@ async def cbbasic(_, query: CallbackQuery):
 
 » /list => Sonrakı musiqi siyahını öyrən .
 
-Məlumat : Azərbaycan tərcüməsi əlavə olunub🥰 . . .
+Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰 . . .
 
 **""",
         reply_markup=InlineKeyboardMarkup(
@@ -154,7 +154,7 @@ async def cbadmin(_, query: CallbackQuery):
 
 » /list => Sonrakı musiqi siyahını öyrən .
 
-Məlumat : Azərbaycan tərcüməsi əlavə olunub🥰 . . .
+Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰 . . .
 
 **""",
         reply_markup=InlineKeyboardMarkup(
