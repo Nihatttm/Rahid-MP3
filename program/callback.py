@@ -85,7 +85,7 @@ async def cbcmds(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Sahib Əmrləri ", callback_data="cbsudo"),
+                    InlineKeyboardButton("📚 Sahib əmrləri ", callback_data="cbsudo"),
                     InlineKeyboardButton("📚 Əsas əmrlər", callback_data="cbbasic")
                 ],[
                     InlineKeyboardButton("🔙  Geri  🔙", callback_data="cbstart")
