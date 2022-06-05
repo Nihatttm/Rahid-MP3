@@ -30,11 +30,11 @@ async def broadcast(c: Client, message: Message):
                 sent += 1
             except Exception:
                 pass
-        await message.reply_text(f"✅  ɢʀᴜʙ ʏᴀʏɪɴɪ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .")
+        await message.reply_text(f"✅ Qrup yayımı tamamlandı .")
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**ᴋᴜʟʟᴀɴɪᴍ**:\n\n/broadcast (`ᴍᴇsᴀᴊ`)"
+            "**İstifadə**:\n\n/broadcast (`Mesaj`)"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -50,7 +50,7 @@ async def broadcast(c: Client, message: Message):
             sent += 1
         except Exception:
             pass
-    await message.reply_text(f"✅ ɢʀᴜʙ ʏᴀʏɪɴɪ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n📌 {pin} pinleri ile")
+    await message.reply_text(f"✅ Qrup yayımı tamamlandı .\n📌 {pin} sancaq ilə")
 
 
 @Client.on_message(command(["broadcast_pin", f"broadcast_pin@{bn}"]) & ~filters.edited)
@@ -80,12 +80,12 @@ async def broadcast_pin(c: Client, message: Message):
             except Exception:
                 pass
         await message.reply_text(
-            f"✅ Grupta yayın tamamlandı ."
+            f"✅ Qrupda yayım tamamlandı ."
         )
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**ᴋᴜʟʟᴀɴɪᴍ**:\n\n/broadcast_pin (`ᴍᴇsᴀᴊ`) "
+            "**İstifadə**:\n\n/broadcast_pin (`Mesaj`) "
         )
         return
     text = message.text.split(None, 1)[1]
@@ -108,5 +108,5 @@ async def broadcast_pin(c: Client, message: Message):
         except Exception:
             pass
     await message.reply_text(
-        f"✅ Grupta yayın tamamlandı.\n📌 {pin} pinleri ile."
+        f"✅ Qrupda yayım tamamlandı.\n📌 {pin} pinleri ile."
     )
