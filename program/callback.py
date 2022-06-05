@@ -19,11 +19,11 @@ async def cbstart(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
         f"""● **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **\n
-● **Mən səsli söhbətlərdə musiqi botuyam 🥰 . . !**
+● **Mən səsli söhbətlərdə musiqi botuyam 🥰**
 
-● **Hər hansı problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz . . !**
+● **Hər hansı problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz!**
 
-● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin . . !**""",
+● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin!**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
