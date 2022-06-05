@@ -17,8 +17,8 @@ from pytgcalls.types.stream import StreamAudioEnded
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="cbmenu"),
-            InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="cls"),
+            InlineKeyboardButton(text="• Menyu", callback_data="cbmenu"),
+            InlineKeyboardButton(text="• Yaxın", callback_data="cls"),
         ]
     ]
 )
@@ -115,12 +115,12 @@ async def stream_end_handler(_, u: Update):
         elif op == 2:
             await bot.send_message(
                 chat_id,
-                "❌ **Bir hata oluştu**\n\n» **Temizleme Kuyruklar ve görüntülü sohbetten ayrılma.**",
+                "❌ **Nəsə xəta baş verdi**\n\n» **Növbələri təmizləmək və video söhbətdən çıxmaq.**",
             )
         else:
             await bot.send_message(
                 chat_id,
-                f"⏩ **sᴏɴʀᴀᴋɪ ᴘᴀʀᴄᴀʏᴀ ᴀᴛʟᴀɴᴅɪ**\n\n🏷 **ɪsɪᴍ:** [{op[0]}]({op[1]}) | `{op[2]}`\n💬 **ɢʀᴜʙ:** `{chat_id}`",
+                f"⏩ **Növbəti trekə keçildi**\n\n🏷 **Ad:** [{op[0]}]({op[1]}) | `{op[2]}`\n💬 **Qrup:** `{chat_id}`",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
