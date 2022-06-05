@@ -46,11 +46,11 @@ def song(_, message):
     query = " ".join(message.command[1:])
     if is_downloading:
         message.reply(
-            "» ᴅɪɢᴇʀ ɪɴᴅɪʀᴍᴇ ᴅᴇᴠᴀᴍ ᴇᴅɪʏᴏʀ ʟᴜᴛғᴇɴ ᴅᴀʜᴀ sᴏɴʀᴀ ᴛᴇᴋʀᴀʀ ᴅᴇɴᴇʏɪɴ !"
+            "» Digər endirmə davam edir, daha sonra yenidən cəhd edin !"
         )
         return
     is_downloading = True
-    m = message.reply("🔎 sᴀʀᴋɪ ᴀʀᴀɴɪʏᴏʀ ...")
+    m = message.reply("🔎 Mahnı axtarılır...")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -63,10 +63,10 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ sᴀʀᴋɪ ʙᴜʟᴜɴᴀᴍᴀᴅɪ.\n\nʟᴜᴛғᴇɴ ɢᴇᴄᴇʀʟɪ ʙɪʀ sᴀʀᴋɪ ᴠᴇʀɪɴ !")
+        m.edit("❌ Şarkı bulunamadı.\n\nzəhmət olmasa düzgün mahnı adı yazın !")
         print(str(e))
         return
-    m.edit("📥 sᴀʀᴋɪ ɪɴᴅɪʀɪʟɪʏᴏʀ ...")
+    m.edit("📥 Mahnı yüklənir...")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -78,7 +78,7 @@ def song(_, message):
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 sᴀʀᴋɪ ʏᴜᴋʟᴇɴɪʏᴏʀ ...")
+        m.edit("📤 Mahnı yüklənir ...")
         message.reply_audio(
             audio_file,
             caption=rep,
@@ -91,7 +91,7 @@ def song(_, message):
         m.delete()
         is_downloading = False
     except Exception as e:
-        m.edit("❌ hata, bot sahibinin düzeltmesini bekleyin")
+        m.edit("❌ Xəta, bot sahibinin düzəltməsini gözləyin")
         print(e)
 
     try:
@@ -117,7 +117,7 @@ async def vsong(client, message):
     query = " ".join(message.command[1:])
     if is_downloading:
         return await message.reply(
-            "» ᴅɪɢᴇʀ ɪɴᴅɪʀᴍᴇ ᴅᴇᴠᴀᴍ ᴇᴅɪʏᴏʀ ʟᴜᴛғᴇɴ ᴅᴀʜᴀ sᴏɴʀᴀ ᴛᴇᴋʀᴀʀ ᴅᴇɴᴇʏɪɴ !"
+            "» Digər endirmə davam edir, daha sonra yenidən cəhd edin !"
         )
     is_downloading = True
     try:
@@ -135,14 +135,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 ᴠɪᴅᴇᴏ ɪɴᴅɪʀɪʟɪʏᴏʀ ...")
+        msg = await message.reply("📥 Video yüklənir...")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
-        return await msg.edit(f"🚫 ʜᴀᴛᴀ: `{e}`")
+        return await msg.edit(f"🚫 Xəta: `{e}`")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 ᴠɪᴅᴇᴏ ʏᴜᴋʟᴇɴɪʏᴏʀ ...")
+    await msg.edit("📤 Video yüklənir...")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
@@ -160,19 +160,19 @@ async def vsong(client, message):
 @Client.on_message(command(["lyrics", f"lyrics@{bn}", "lyrics"]))
 async def get_lyric_genius(_, message: Message):
     if len(message.command) < 2:
-        return await message.reply_text("**ᴋᴜʟʟᴀɴɪᴍ:**\n\n/lyrics (sᴀʀᴋɪ ᴀᴅɪ)")
-    m = await message.reply_text("🔍 sᴀʀᴋɪ sᴏᴢʟᴇʀɪ ᴀʀᴀɴɪʏᴏʀ ...")
+        return await message.reply_text("**İstifadə edin:**\n\n/lyrics (Mahnı adı)")
+    m = await message.reply_text("🔍 Mahnı sözləri axtarılır...")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
     y.verbose = False
     S = y.search_song(query, get_full_info=False)
     if S is None:
-        return await m.edit("❌ `404` sᴀʀᴋɪ sᴏᴢʟᴇʀɪ ʙᴜʟᴜɴᴀᴍᴀᴅɪ")
+        return await m.edit("❌ `404` Mahnı sözləri tapılmadı")
     xxx = f"""
-**sᴀʀᴋɪ:** {query}
-**sᴀɴᴀᴛᴄɪ:** {S.artist}
-**sᴀʀᴋɪ sᴏᴢᴜ:**
+**Mahnı:** {query}
+**Sənətçi:** {S.artist}
+**Mahnı sözü:**
 {S.lyrics}"""
     if len(xxx) > 4096:
         await m.delete()
