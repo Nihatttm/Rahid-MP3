@@ -11,9 +11,9 @@
         "mongodb",
         "pyrogram"
     ],
-    "website": "https://t.me/mutsuz_panda",
-    "repository": "https://github.com/amahocam/muudvideo",
-    "success_url": "https://t.me/Richard_Ramirezz",
+    "website": "https://t.me/Xatireler_ebedidir",
+    "repository": "https://github.com/Rahid_2003/Rahid-MP3",
+    "success_url": "https://t.me/Bayramova_o5",
     "env": {
         "API_ID": {
             "description": "My.telegram'dan uygulama apı-hash.org/apps",
@@ -50,32 +50,32 @@
         "SUDO_USERS": {
             "description": "sudo üye listesine eklenecek kullanıcı kimliği listesi veya sadece id doldurun",
             "required": true,
-            "value": "5128216420"
+            "value": "1485534068"
         },
         "UPSTREAM_REPO": {
             "description": "Bu, güncelleme özelliği için gereklidir, eğer çatallı repo dağıttıysanız, olduğu gibi bırakmazsanız, çatallı repo bağlantınızı buraya koyun",
             "required": true,
-            "value": "https://github.com/amahocam/muudvideo"
+            "value": "https://github.com/Rahid_2003/Rahid-MP3"
         },
         "GROUP_SUPPORT": {
             "description": "Grup kullanıcı adı @ olmadan yazınız.",
             "required": true,
-            "value": "mutsuz_panda"
+            "value": "Kinggame98"
         },
         "UPDATES_CHANNEL": {
             "description": "Kanal kullanıcı adı @ olmadan yazınız.",
             "required": true,
-            "value": "Richard_Ramirezzblog"
+            "value": "Xatireler_ebedidir"
         },
         "OWNER_NAME": {
             "description": "Kendi kullanıcı adınız @ olmadan yazınız",
             "required": true,
-            "value": "mutsuz_panda"
+            "value": "Bayramova_o5"
         },
         "ALIVE_NAME": {
             "description": "telgraf hesabınızın takma adı/adıyla doldurun",
             "required": true,
-            "value": "Moon lyrcs"
+            "value": "Bayramova_o5"
         }
     },
     "addons": [],
