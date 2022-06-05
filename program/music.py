@@ -63,25 +63,25 @@ async def play(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"● Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisiniz . . ! **icazələr**:\n\n» Mesajları silmək \n» Bağlantı ilə dəvət etmək\n» Səsli söhbətləri yönəltmək\n\nyetkiləri verdikdən sonra /reload yazın . . !"
+            f"● Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisiniz . . ! **icazələr**:\n\n» Mesajları silmək \n» Bağlantı ilə dəvət etmək\n» Səsli söhbətləri yönəltmək\n\nyetkiləri verdikdən sonra /reload yazın"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
             "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
-            + "\n\n» Səsli söhbətləri yönəltmək ."
+            + "\n\n» Səsli söhbətləri yönəltmək."
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
             "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
-            + "\n\n» Mesajları silmə ."
+            + "\n\n» Mesajları silmə."
         )
         return
     if not a.can_invite_users:
         await m.reply_text(
             "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
-            + "\n\n» Bağlantı ilə dəvət etmək ."
+            + "\n\n» Bağlantı ilə dəvət etmək."
         )
         return
     try:
@@ -107,7 +107,7 @@ async def play(c: Client, m: Message):
             pass
         except Exception as e:
             return await m.reply_text(
-                f"❌ **Asistan qoşula bilmədi!**\n\n**reason**: `{e}`"
+                f"❌ **Asistan qoşula bilmədi😐**\n\n**reason**: `{e}`"
             )
     if replied:
         if replied.audio or replied.voice:
@@ -176,14 +176,14 @@ async def play(c: Client, m: Message):
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "» Əsas mahnının adını və ya audio faylını verin .**"
+                    "» Əsas mahnının adını və ya audio faylını verin.**"
                 )
             else:
                 suhu = await c.send_message(chat_id, "🔍 **Axtarılır...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await suhu.edit("❌ **Nəticə tapılmadı .**")
+                    await suhu.edit("❌ **Nəticə tapılmadı.**")
                 else:
                     songname = search[0]
                     title = search[0]
@@ -239,7 +239,7 @@ async def play(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» Mənə mahnının adını və ya audio faylını verin .**"
+                "» Mənə mahnının adını və ya audio faylını verin.**"
             )
         else:
             suhu = await c.send_message(chat_id, "🔍 **Axtarılır...**")
