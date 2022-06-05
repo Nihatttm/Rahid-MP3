@@ -79,7 +79,7 @@ async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **
 
-• ** Aşağıdakı butonlara klikləyin . . !
+• ** Aşağıdakı butonlara klikləyin ⬇️
 
 **""",
         reply_markup=InlineKeyboardMarkup(
