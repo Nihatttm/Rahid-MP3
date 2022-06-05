@@ -31,7 +31,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot**Yenidən başladıldı !**\n✅ **Admin siyahısı yeniləndi !**"
+        "✅ Bot**Yenidən başladıldı!**\n✅ **Admin siyahısı yeniləndi!**"
     )
 
 
@@ -44,7 +44,7 @@ async def skip(c: Client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await c.send_message(chat_id, "**indi heç nə oxunmur !**")
+            await c.send_message(chat_id, "**indi heç nə oxunmur!**")
         elif op == 1:
             await c.send_message(chat_id, "» **Növbəti mahnı yoxdur .**\n**Mən səsli çatı tərk edirəm.**")
         elif op == 2:
@@ -62,7 +62,7 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ **Atlandı** Növbəti mahnı .\n\🏷 **Ad:** [{op[0]}]({op[1]})\n💬 **Qrup:** `{chat_id}`\n🎧 **Sorğu:** {requester}",
+                caption=f"⏭ **Atlandı** Növbəti mahnı.\n\🏷 **Ad:** [{op[0]}]({op[1]})\n💬 **Qrup:** `{chat_id}`\n🎧 **Sorğu:** {requester}",
             )
     else:
         skip = m.text.split(None, 1)[1]
@@ -214,7 +214,7 @@ async def cbresume(_, query: CallbackQuery):
 async def cbstop(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər!", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -231,7 +231,7 @@ async def cbstop(_, query: CallbackQuery):
 async def cbmute(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər!", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -250,7 +250,7 @@ async def cbmute(_, query: CallbackQuery):
 async def cbunmute(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
+        return await query.answer("💡 Video çatı idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər!", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
