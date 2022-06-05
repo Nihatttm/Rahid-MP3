@@ -36,12 +36,12 @@ async def leave_chat(_, m: Message):
         await user.leave_chat(chat_id)
         return await _.send_message(
             chat_id,
-            "**✅ Asistan sohbetten ayrıldı**",
+            "**✅ Asistan söhbəti tərk etdi**",
         )
     except UserNotParticipant:
         return await _.send_message(
             chat_id,
-            "**❌ Asistan zaten sohbetten ayrıldı**",
+            "**❌ Asistan artıq çatı tərk edib**",
         )
 
 
@@ -54,23 +54,23 @@ async def leave_all(client, message):
     left = 0
     failed = 0
     
-    msg = await message.reply("🔄 Userbot tüm Gruptan ayrılıyor !")
+    msg = await message.reply("🔄 Userbot bütün qrupu tərk edir !")
     async for dialog in user.iter_dialogs():
         try:
             await user.leave_chat(dialog.chat.id)
             left += 1
             await msg.edit(
-                f"Userbot tüm Gruptan ayrılıyor...\n\nAyrıldı: {left} sohbetler.\nBaşarısız oldu: {failed} sohbetler."
+                f"Userbot bütün qrupu tərk edir...\n\nAyrıldı: {left} söhbətlər.\nUğursuz oldu: {failed} söhbətlər."
             )
         except BaseException:
             failed += 1
             await msg.edit(
-                f"Kullanıcı botu ayrılıyor...\n\nAyrıldı: {left} sohbetler.\nBaşarısız oldu: {failed} sohbetler."
+                f"İstifadəçi botu tərk edir...\n\nAyrıldı: {left} söhbətlər.\nUğursuz oldu: {failed} söhbətlər."
             )
         await asyncio.sleep(0.7)
     await msg.delete()
     await client.send_message(
-        message.chat.id, f"✅ Tamamlanan: {left} sohbetler.\n❌ Başarısız: {failed} sohbetler."
+        message.chat.id, f"✅ Tamamlanan: {left} söhbətlər.\n❌ Uğursuz: {failed} söhbətlər."
     )
 
 
