@@ -15,7 +15,7 @@ from driver.filters import command, other_filters
 
 
 keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("🗑 ᴋᴀᴘᴀᴛ", callback_data="cls")]]
+    [[InlineKeyboardButton("🗑 Bağla", callback_data="cls")]]
 )
 
 
@@ -25,9 +25,9 @@ async def playlist(client, m: Message):
    if chat_id in QUEUE:
       chat_queue = get_queue(chat_id)
       if len(chat_queue)==1:
-         await m.reply(f"💡 **Şu anda Akış:**\n\n• [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`", reply_markup=keyboard, disable_web_page_preview=True)
+         await m.reply(f"💡 **Hazırda yayımlanır:**\n\n• [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`", reply_markup=keyboard, disable_web_page_preview=True)
       else:
-         QUE = f"💡 **Şu anda Akış:**\n\n• [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**📖 Sıra Listesi:**\n"
+         QUE = f"💡 **Hazırda yayımlanır:**\n\n• [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**📖 Reytinq siyahısı:**\n"
          l = len(chat_queue)
          for x in range (1, l):
             han = chat_queue[x][0]
@@ -36,4 +36,4 @@ async def playlist(client, m: Message):
             QUE = QUE + "\n" + f"**#{x}** - [{han}]({hok}) | `{hap}`"
          await m.reply(QUE, reply_markup=keyboard, disable_web_page_preview=True)
    else:
-      await m.reply("❌ **şu anda hiçbir şey yayınlanmıyor.**")
+      await m.reply("❌ **Hazırda heç nə dərc edilmir.**")
