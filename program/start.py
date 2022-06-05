@@ -63,7 +63,7 @@ async def start_(client: Client, message: Message):
 
 ● **Hər hansı bir problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz!**
 
-● **📚 Əmrlər butona basıb bütün əmrləri öyrənin!**
+● **📚 Əmrlər butona basıb bütün əmrləri öyrənin ⬇️**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -75,7 +75,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
-                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/Bayramova_o5"),
+                    InlineKeyboardButton("😍 Sahibəm", url=f"https://t.me/Bayramova_o5"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -126,7 +126,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `ᴘɪɴɢ!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `Ping!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
