@@ -18,30 +18,30 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
-        f"""● **ᴍᴇʀʜᴀʙᴀ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **\n
-● **ᴛᴇʟᴇɢʀᴀᴍ sᴇsʟɪ sᴏʜʙᴇᴛʟᴇʀɪ ᴀʀᴀᴄɪʟɪɢɪʏʟᴀ ɢʀᴜʙʟᴀʀᴅᴀ ᴍᴜᴢɪᴋ ᴅɪɴʟᴇᴍᴇɴɪᴢɪ ᴠᴇ ᴠɪᴅᴇᴏ ɪᴢʟᴇᴍᴇɴɪᴢɪ sᴀɢʟɪʏᴀʙɪʟɪʀɪᴍ . . !**
+        f"""● **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **\n
+● **Mən səsli söhbətlərdə musiqi botuyam 🥰 . . !**
 
-● **ʜᴇʀʜᴀɴɢɪ ʙɪʀ sᴏʀᴜɴ ɪʟᴇ ᴋᴀʀsɪʟᴀsɪʀsᴀɴɪᴢ ᴅᴇsᴛᴇᴋ ɢʀᴜʙᴜᴍᴜᴢᴀ ʙᴀsᴠᴜʀᴍᴀʏɪ ɪʜᴍᴀʟ ᴇᴛᴍᴇʏɪɴ . . !**
+● **Hər hansı problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz . . !**
 
-● **📚 ᴋᴏᴍᴜᴛʟᴀʀ ʙᴜᴛᴏɴᴜɴᴀ ᴛɪᴋʟᴀʏɪᴘ ᴛᴜᴍ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴏɢʀᴇɴɪɴ . . !**""",
+● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin . . !**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎉  ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ  🎉",
+                        "🎉  Məni qrupa əlavə et  🎉",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
                 [
-                    InlineKeyboardButton("📚 ᴋᴏᴍᴜᴛʟᴀʀ", callback_data="cbcmds"),
-                    InlineKeyboardButton("💝 sᴀʜɪʙɪᴍ", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
+                    InlineKeyboardButton("💝 Sahibim", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗯️ ᴅᴇsᴛᴇᴋ ɢʀᴜʙᴜ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "💬 Söhbət Qrup", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 ʙɪʟɢɪ ᴋᴀɴᴀʟɪ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🥰 Kanalım", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
             ]
@@ -77,18 +77,18 @@ async def cbguides(_, query: CallbackQuery):
 async def cbcmds(_, query: CallbackQuery):
     await query.answer("commands menu")
     await query.edit_message_text(
-        f"""✨ **ᴍᴇʀʜᴀʙᴀ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **
+        f"""✨ **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **
 
-• ** ᴀssᴀɢɪᴅᴀᴋɪ ʙᴜᴛᴏɴʟᴀʀᴀ ᴛɪᴋʟᴀʏɪɴ . . !
+• ** Aşağıdakı butonlara klikləyin . . !
 
 **""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 sᴀʜɪᴘ ᴋᴏᴍᴜᴛʟᴀʀɪ ", callback_data="cbsudo"),
-                    InlineKeyboardButton("📚 ᴛᴇᴍᴇʟ ᴋᴏᴍᴜᴛʟᴀʀ", callback_data="cbbasic")
+                    InlineKeyboardButton("📚 Sahib Əmrləri ", callback_data="cbsudo"),
+                    InlineKeyboardButton("📚 Əsas əmrlər", callback_data="cbbasic")
                 ],[
-                    InlineKeyboardButton("🔙  ɢᴇʀɪ ɢɪᴛ  🔙", callback_data="cbstart")
+                    InlineKeyboardButton("🔙  Geri  🔙", callback_data="cbstart")
                 ],
             ]
         ),
@@ -99,32 +99,32 @@ async def cbcmds(_, query: CallbackQuery):
 async def cbbasic(_, query: CallbackQuery):
     await query.answer("basic commands")
     await query.edit_message_text(
-        f"""📚 **ᴛᴇᴍᴇʟ ᴋᴏᴍᴜᴛʟᴀʀɪ :
+        f"""📚 **Əsas əmrlər :
 
-» /bul => ᴍᴜᴢɪᴋ ɪɴᴅɪʀ .
-» /ara => ᴠɪᴅᴇᴏ ɪɴᴅɪʀ .
-» /oynat => ᴍᴜᴢɪᴋ ᴏʏɴᴀᴛ .
-» /izlet => ᴠɪᴅᴇᴏ ᴏʏɴᴀᴛ .
+» /bul => Musiqi yüklə .
+» /ara => Video yüklə .
+» /oynat => Musiqi oynat .
+» /izlet => Video oynat .
 
-» /durdur => ᴍᴜᴢɪɢɪ ᴅᴜʀᴅᴜʀ .
-» /devam => ᴍᴜᴢɪɢɪ sᴜʀᴅᴜʀ .
-» /atla => ᴍᴜᴢɪɢɪ ᴀᴛʟᴀ .
-» /son => ᴍᴜᴢɪɢɪ sᴏɴʟᴀɴᴅɪʀ .
-» /lyrics => sᴀʀᴋɪ sᴏᴢʟᴇʀɪɴɪ ʙᴜʟ .
-» /reload => ᴀᴅᴍɪɴ ʟɪsᴛᴇsɪɴɪ ɢᴜɴᴄᴇʟʟᴇʀ .
-» /katil => ᴀsɪsᴛᴀɴɪ ɢʀᴜʙᴀ ᴅᴀᴠᴇᴛ ᴇᴅᴇʀ .
+» /durdur => Musiqi dayandır .
+» /devam => Musiqi davam et .
+» /atla => Musiqi keçin .
+» /son => Musiqi dayandır .
+» /lyrics => Mahnı sözlərini tap .
+» /reload => Admin siyahısı yenilə .
+» /katil => Asistanı qrupa dəvət et .
 
-» /voynat ( ʟɪɴᴋ ) => ʀᴀᴅɪᴏ ᴠᴇ ғɪʟᴍ ɢɪʙɪ  ᴄᴀɴʟɪ ᴀᴋɪsʟᴀʀɪ ᴏʏɴᴀᴛ.
+» /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
-» /playlist => ᴍᴜᴢɪɢɪ PʟᴀʏLɪsᴛ'ᴇ ᴇᴋʟᴇ.
+» /playlist => Musiqi playlistə əlavə et.
 
-» /list => sɪʀᴀᴅᴀᴋɪ ᴍᴜᴢɪᴋ ʟɪsᴛᴇsɪɴɪ ᴏɢʀᴇɴ .
+» /list => Sonrakı musiqi siyahını öyrən .
 
-ʙɪʟɢɪ : ᴛᴜʀᴋᴄᴇ ᴠᴇ ɪɴɢɪʟɪᴢᴄᴇ ᴋᴏᴍᴜᴛʟᴀʀ ɢᴜɴᴄᴇʟᴅɪʀ ᴋᴇʏғɪɴɪᴢᴇ ɢᴏʀᴇ . . .
+Məlumat : Azərbaycan tərcüməsi əlavə olunub🥰 . . .
 
 **""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙  ɢᴇʀɪ ɢɪᴛ  🔙", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙  Geri  🔙", callback_data="cbcmds")]]
         ),
     )
 
@@ -133,32 +133,32 @@ async def cbbasic(_, query: CallbackQuery):
 async def cbadmin(_, query: CallbackQuery):
     await query.answer("admin commands")
     await query.edit_message_text(
-        f"""📚 **ᴛᴇᴍᴇʟ ᴋᴏᴍᴜᴛʟᴀʀɪ :
+        f"""📚 **Əsas əmrlər :
 
-» /bul => ᴍᴜᴢɪᴋ ɪɴᴅɪʀ .
-» /ara => ᴠɪᴅᴇᴏ ɪɴᴅɪʀ .
-» /oynat => ᴍᴜᴢɪᴋ ᴏʏɴᴀᴛ .
-» /izlet => ᴠɪᴅᴇᴏ ᴏʏɴᴀᴛ .
+» /bul => Musiqi yüklə .
+» /ara => Video yüklə .
+» /oynat => Musiqi oynat .
+» /izlet => Video oynat .
 
-» /durdur => ᴍᴜᴢɪɢɪ ᴅᴜʀᴅᴜʀ .
-» /devam => ᴍᴜᴢɪɢɪ sᴜʀᴅᴜʀ .
-» /atla => ᴍᴜᴢɪɢɪ ᴀᴛʟᴀ .
-» /son => ᴍᴜᴢɪɢɪ sᴏɴʟᴀɴᴅɪʀ .
-» /lyrics => sᴀʀᴋɪ sᴏᴢʟᴇʀɪɴɪ ʙᴜʟ .
-» /reload => ᴀᴅᴍɪɴ ʟɪsᴛᴇsɪɴɪ ɢᴜɴᴄᴇʟʟᴇʀ .
-» /katil => ᴀsɪsᴛᴀɴɪ ɢʀᴜʙᴀ ᴅᴀᴠᴇᴛ ᴇᴅᴇʀ .
+» /durdur => Musiqi dayandır .
+» /devam => Musiqi davam et .
+» /atla => Musiqi keçin .
+» /son => Musiqi dayandır .
+» /lyrics => Mahnı sözlərini tap .
+» /reload => Admin siyahısı yenilə .
+» /katil => Asistanı qrupa dəvət et .
 
-» /voynat ( ʟɪɴᴋ ) => ʀᴀᴅɪᴏ ᴠᴇ ғɪʟᴍ ɢɪʙɪ  ᴄᴀɴʟɪ ᴀᴋɪsʟᴀʀɪ ᴏʏɴᴀᴛ.
+» /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
-» /playlist => ᴍᴜᴢɪɢɪ PʟᴀʏLɪsᴛ'ᴇ ᴇᴋʟᴇ.
+» /playlist => Musiqi playlistə əlavə et.
 
-» /list => sɪʀᴀᴅᴀᴋɪ ᴍᴜᴢɪᴋ ʟɪsᴛᴇsɪɴɪ ᴏɢʀᴇɴ .
+» /list => Sonrakı musiqi siyahını öyrən .
 
-ʙɪʟɢɪ : ᴛᴜʀᴋᴄᴇ ᴠᴇ ɪɴɢɪʟɪᴢᴄᴇ ᴋᴏᴍᴜᴛʟᴀʀ ɢᴜɴᴄᴇʟᴅɪʀ ᴋᴇʏғɪɴɪᴢᴇ ɢᴏʀᴇ . . .
+Məlumat : Azərbaycan tərcüməsi əlavə olunub🥰 . . .
 
 **""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 ɢᴇʀɪ ɢɪᴛ", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙 Geri", callback_data="cbcmds")]]
         ),
     )
 
@@ -166,25 +166,25 @@ async def cbadmin(_, query: CallbackQuery):
 async def cbsudo(_, query: CallbackQuery):
     await query.answer("sudo commands")
     await query.edit_message_text(
-        f"""📚 **sᴀʜɪᴘ ᴋᴏᴍᴜᴛʟᴀʀɪ :
+        f"""📚 **Sahib əmrləri :
 
-ɴᴏᴛ : Sᴀᴅᴇᴄᴇ
-ʙᴏᴛ sᴀʜɪʙɪ ᴋᴜʟʟᴀɴᴀʙɪʟɪʀ . . .
+ɴᴏᴛ : Sadəcə
+ʙᴏᴛ Sahibi istifadə edə bilər . . .
 
-» /broadcast =>  ʏᴀʏɪɴ ʏᴀᴘᴍᴀᴋ !
-» /gban => ᴋᴜʀᴇsᴇʟ ʏᴀsᴀᴋʟᴀᴍᴀ !
-» /ungban => ᴋᴜʀᴇsᴇʟ ʏᴀsᴀᴋ ᴋᴀʟᴅɪʀᴍᴀ !
-» /info => ʙᴏᴛᴜɴ ʙɪʟɢɪʟᴇʀɪɴɪ ᴏɢʀᴇɴ !
-» /restart => ʙᴏᴛᴜ ʏᴇɴɪᴅᴇɴ ʙᴀsʟᴀᴛ !
-» /update => ʙᴏᴛᴜ ɢᴜɴᴄᴇʟʟᴇ !
-» /hiz => ʙᴏᴛᴜɴ ʜɪᴢɪɴɪ ᴏɢʀᴇɴ !
-» /ping => ᴘɪɴɢ ᴅᴜʀᴜᴍᴜɴᴜ ɢᴏsᴛᴇʀɪʀ . . .
-» /uptime => ᴄᴀɴʟɪ ʙɪʟɢɪʟᴇʀɪ ɢᴏsᴛᴇʀɪʀ . . .
-» /alive => ʙᴏᴛᴜɴ ᴄᴀʟɪsᴍᴀ ᴅᴜʀᴜᴍᴜɴᴜ ɢᴏsᴛᴇʀɪʀ . . .
+» /broadcast =>  Yayım etmək !
+» /gban => İstifadəçi qadağan etmək !
+» /ungban => İstifadəçi qadağanı qaldırmaq !
+» /info => Bot məlumatlarını öyrən !
+» /restart => Botu yenidən başlat !
+» /update => Botu yenilə !
+» /hiz => Botun sürətini öyrən !
+» /ping => Botun pingi göstərir . . .
+» /uptime => Canlı məlumatları göstərir . . .
+» /alive => Botun işləmək məlumatını göstərir . . .
 
 **""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙  ɢᴇʀɪ ɢɪᴛ  🔙", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙  Geri  🔙", callback_data="cbcmds")]]
         ),
     )
 
@@ -193,7 +193,7 @@ async def cbsudo(_, query: CallbackQuery):
 async def cbmenu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Səsli söhbəti idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     chat_id = query.message.chat.id
     user_id = query.message.from_user.id
     buttons = menu_markup(user_id)
@@ -204,12 +204,12 @@ async def cbmenu(_, query: CallbackQuery):
               reply_markup=InlineKeyboardMarkup(buttons),
           )
     else:
-        await query.answer("❌ şu anda hiçbir şey yayınlanmıyor", show_alert=True)
+        await query.answer("❌ Hazırda heç nə yayımlanmır", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cls"))
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Yalnızca bu düğmeye dokunabilen görüntülü sohbet yönetme iznine sahip yönetici !", show_alert=True)
+        return await query.answer("💡 Səsli söhbəti idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər !", show_alert=True)
     await query.message.delete()
