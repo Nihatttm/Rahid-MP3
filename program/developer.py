@@ -35,7 +35,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 @sudo_users_only
 async def executor(client, message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="» Yürütmek için bir komut verin")
+        return await edit_or_reply(message, text="» İcra etmək üçün əmr verin")
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
@@ -111,7 +111,7 @@ async def runtime_func_cq(_, cq):
 @sudo_users_only
 async def shellrunner(client, message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="**kullanım:**\n\n» /sh git pull")
+        return await edit_or_reply(message, text="**İstifadə:**\n\n» /sh git pull")
     text = message.text.split(None, 1)[1]
     if "\n" in text:
         code = text.split("\n")
@@ -175,14 +175,14 @@ async def shellrunner(client, message):
 async def bot_leave_group(_, message):
     if len(message.command) != 2:
         await message.reply_text(
-            "**kullanım:**\n\n» /leavebot [chat id]"
+            "**İstifadə:**\n\n» /leavebot [chat id]"
         )
         return
     chat = message.text.split(None, 2)[1]
     try:
         await bot.leave_chat(chat)
     except Exception as e:
-        await message.reply_text(f"❌ işlem başarısız\n\nreason: `{e}`")
+        await message.reply_text(f"❌ Əməliyyat uğursuz oldu\n\nreason: `{e}`")
         print(e)
         return
-    await message.reply_text(f"✅ Bot başarıyla Gruptan ayrıldı:\n\n💭 » `{chat}`")
+    await message.reply_text(f"✅ Bot qrupdan uğurla ayrıldı:\n\n💭 » `{chat}`")
