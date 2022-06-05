@@ -59,11 +59,11 @@ async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
         f"""● **Salam 🙋🏻‍♀️ {message.from_user.mention()} **\n
-● **Mən səsli söhbətlərdə musiqi botuyam 🥰 . . !**
+● **Mən səsli söhbətlərdə musiqi botuyam 🥰**
 
-● **Hər hansı bir problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz . . !**
+● **Hər hansı bir problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz!**
 
-● **📚 Əmrlər butona basıb bütün əmrləri öyrənin . . !**
+● **📚 Əmrlər butona basıb bütün əmrləri öyrənin!**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -111,7 +111,7 @@ async def alive(c: Client, message: Message):
         ]
     )
 
-    alive = f"**• Salam {message.from_user.mention()} {BOT_NAME}**\n\n🧑🏼‍💻 Sahibim: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 Bot versiyası: `v{__version__}`\n🔥 Pragram versiyası: `{pyrover}`\n🐍 Python versiyası: `{__python_version__}`\n✨ PyTgCalls versiyası: `{pytover.__version__}`\n🆙 İşləmək durumu: `{uptime}`\n\n❤ **Məni qrupa əlavə etdiyiniz üçün təşəkkürlər . . !**"
+    alive = f"**• Salam {message.from_user.mention()} {BOT_NAME}**\n\n🧑🏼‍💻 Sahibim: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 Bot versiyası: `v{__version__}`\n🔥 Pragram versiyası: `{pyrover}`\n🐍 Python versiyası: `{__python_version__}`\n✨ PyTgCalls versiyası: `{pytover.__version__}`\n🆙 İşləmək durumu: `{uptime}`\n\n❤ **Məni qrupa əlavə etdiyiniz üçün təşəkkürlər 😍**"
 
     await c.send_photo(
         chat_id,
@@ -164,9 +164,9 @@ async def new_chat(c: Client, m: Message):
     for member in m.new_chat_members:
         if member.id == bot_id:
             return await m.reply(
-                "**❤️ Məni qrupa əlavə etdiyiniz üçün təşəkkürlər . . ! !**\n\n"
+                "**❤️ Məni qrupa əlavə etdiyiniz üçün təşəkkürlər 🥰!**\n\n"
                 "**Məni qrupda admin et sonra  /katil əmr ilə Asistanı qrupa dəvət edin . . !\n\n**"
-                "**Bütün bunları etdikdən sonra  /reload Əmri istifadə edin və hərşey hazır ! Botu istifadə edə bilərsiniz 🥰 . . .**",
+                "**Bütün bunları etdikdən sonra  /reload Əmri istifadə edin və hərşey hazır ! Botu istifadə edə bilərsiniz 🥰**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
