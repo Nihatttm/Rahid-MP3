@@ -61,7 +61,7 @@ async def update_repo(_, message: Message):
     msg = await message.reply("🔄 `Akış işleniyor...`")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅ güncelleme bitti\n\n• bot yeniden başlatıldı, 1 dakika sonra tekrar aktif.")
+        await msg.edit("✅ Yeniləmə tamamlandı\n\n• bot yenidən işə salındı, 1 dəqiqələr ərzində yenidən aktivləşir..")
         system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
@@ -71,8 +71,8 @@ async def update_repo(_, message: Message):
 @Client.on_message(command(["restart", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def restart_bot(_, message: Message):
-    msg = await message.reply("`botu yeniden başlatmak...`")
+    msg = await message.reply("`Botu yenidən başladın...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ bot yeniden başlatıldı\n\n• şimdi bu botu tekrar kullanabilirsiniz.")
+    await msg.edit("✅ bot yenidən işə salındı\n\n• indi bu botu yenidən istifadə edə bilərsiniz.")
     execle(sys.executable, *args, environ)
     return
