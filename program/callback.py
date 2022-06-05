@@ -21,20 +21,20 @@ async def cbstart(_, query: CallbackQuery):
         f"""● **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **\n
 ● **Mən səsli söhbətlərdə musiqi botuyam 🥰**
 
-● **Hər hansı problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz!**
+● **Hər hansı problemlə qarşılaşsanız qrupumuza gəlib bildirə bilərsiniz!**
 
-● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin!**""",
+● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin ⬇️**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎉  Məni qrupa əlavə et  🎉",
+                        "Məni qrupa əlavə et🥳",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
                 [
                     InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
-                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("😍 Sahibəm", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -101,26 +101,26 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /bul => Musiqi yüklə .
-» /ara => Video yüklə .
-» /oynat => Musiqi oynat .
-» /izlet => Video oynat .
+» /bul => Musiqi yüklə.
+» /ara => Video yüklə.
+» /oynat => Musiqi oynat.
+» /izlet => Video oynat.
 
-» /durdur => Musiqi dayandır .
-» /devam => Musiqi davam et .
-» /atla => Musiqi keçin .
-» /son => Musiqi dayandır .
-» /lyrics => Mahnı sözlərini tap .
-» /reload => Admin siyahısı yenilə .
-» /katil => Asistanı qrupa dəvət et .
+» /durdur => Musiqi dayandır.
+» /devam => Musiqi davam et.
+» /atla => Musiqi keçin.
+» /son => Musiqi dayandır.
+» /lyrics => Mahnı sözlərini tap.
+» /reload => Admin siyahısı yenilə.
+» /katil => Asistanı qrupa dəvət et.
 
 » /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
 » /playlist => Musiqi playlistə əlavə et.
 
-» /list => Sonrakı musiqi siyahını öyrən .
+» /list => Sonrakı musiqi siyahını öyrən.
 
-Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰 . . .
+Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰
 
 **""",
         reply_markup=InlineKeyboardMarkup(
@@ -135,26 +135,26 @@ async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /bul => Musiqi yüklə .
-» /ara => Video yüklə .
-» /oynat => Musiqi oynat .
-» /izlet => Video oynat .
+» /bul => Musiqi yüklə.
+» /ara => Video yüklə.
+» /oynat => Musiqi oynat.
+» /izlet => Video oynat.
 
-» /durdur => Musiqi dayandır .
-» /devam => Musiqi davam et .
-» /atla => Musiqi keçin .
-» /son => Musiqi dayandır .
-» /lyrics => Mahnı sözlərini tap .
-» /reload => Admin siyahısı yenilə .
-» /katil => Asistanı qrupa dəvət et .
+» /durdur => Musiqi dayandır.
+» /devam => Musiqi davam et.
+» /atla => Musiqi keçin.
+» /son => Musiqi dayandır.
+» /lyrics => Mahnı sözlərini tap.
+» /reload => Admin siyahısı yenilə.
+» /katil => Asistanı qrupa dəvət et.
 
 » /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
 » /playlist => Musiqi playlistə əlavə et.
 
-» /list => Sonrakı musiqi siyahını öyrən .
+» /list => Sonrakı musiqi siyahını öyrən.
 
-Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰 . . .
+Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰
 
 **""",
         reply_markup=InlineKeyboardMarkup(
@@ -169,18 +169,18 @@ async def cbsudo(_, query: CallbackQuery):
         f"""📚 **Sahib əmrləri :
 
 ɴᴏᴛ : Sadəcə
-ʙᴏᴛ Sahibi istifadə edə bilər . . .
+ʙᴏᴛ Sahibi istifadə edə bilər!
 
-» /broadcast =>  Yayım etmək !
-» /gban => İstifadəçi qadağan etmək !
-» /ungban => İstifadəçi qadağanı qaldırmaq !
-» /info => Bot məlumatlarını öyrən !
-» /restart => Botu yenidən başlat !
-» /update => Botu yenilə !
-» /hiz => Botun sürətini öyrən !
-» /ping => Botun pingi göstərir . . .
-» /uptime => Canlı məlumatları göstərir . . .
-» /alive => Botun işləmək məlumatını göstərir . . .
+» /broadcast =>  Yayım etmək.
+» /gban => İstifadəçi qadağan etmək.
+» /ungban => İstifadəçi qadağanı qaldırmaq.
+» /info => Bot məlumatlarını öyrən.
+» /restart => Botu yenidən başlat.
+» /update => Botu yenilə.
+» /hiz => Botun sürətini öyrən.
+» /ping => Botun pingi göstərir.
+» /uptime => Canlı məlumatları göstərir.
+» /alive => Botun işləmək məlumatını göstərir.
 
 **""",
         reply_markup=InlineKeyboardMarkup(
