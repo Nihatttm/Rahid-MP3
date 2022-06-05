@@ -63,24 +63,24 @@ async def play(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"● Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisiniz . . ! **icazələr**:\n\n» Mesajları silmək \n» Bağlantı ilə dəvət etmək\n» Səsli söhbətləri yönəltmək\n\nyetkiləri verdikdən sonra /reload yazın"
+            f"● Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisiniz! **icazələr**:\n\n» Mesajları silmək \n» Bağlantı ilə dəvət etmək\n» Səsli söhbətləri yönəltmək\n\nyetkiləri verdikdən sonra /reload yazın"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
+            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən :"
             + "\n\n» Səsli söhbətləri yönəltmək."
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
+            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən :"
             + "\n\n» Mesajları silmə."
         )
         return
     if not a.can_invite_users:
         await m.reply_text(
-            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən  :"
+            "💡 Məni istifadə etmək üçün aşağıdakı yetkiləri verməlisən :"
             + "\n\n» Bağlantı ilə dəvət etmək."
         )
         return
