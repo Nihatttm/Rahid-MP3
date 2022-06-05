@@ -69,7 +69,7 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🎉  Məni qrupa əlavə et  🎉",
+                        "Məni qrupa əlavə et 🥳",
                         url=f"https://t.me/Bayramova_Music_Bot?startgroup=true",
                     )
                 ],
