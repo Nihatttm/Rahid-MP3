@@ -58,31 +58,31 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
-        f"""● **ᴍᴇʀʜᴀʙᴀ {message.from_user.mention()} **\n
-● **ᴛᴇʟᴇɢʀᴀᴍ sᴇsʟɪ sᴏʜʙᴇᴛʟᴇʀɪ ᴀʀᴀᴄɪʟɪɢɪʏʟᴀ ɢʀᴜʙʟᴀʀᴅᴀ ᴍᴜᴢɪᴋ ᴅɪɴʟᴇᴍᴇɴɪᴢɪ ᴠᴇ ᴠɪᴅᴇᴏ ɪᴢʟᴇᴍᴇɴɪᴢɪ sᴀɢʟɪʏᴀʙɪʟɪʀɪᴍ . . !**
+        f"""● **Salam 🙋🏻‍♀️ {message.from_user.mention()} **\n
+● **Mən səsli söhbətlərdə musiqi botuyam 🥰 . . !**
 
-● **ʜᴇʀʜᴀɴɢɪ ʙɪʀ sᴏʀᴜɴ ɪʟᴇ ᴋᴀʀsɪʟᴀsɪʀsᴀɴɪᴢ ᴅᴇsᴛᴇᴋ ɢʀᴜʙᴜᴍᴜᴢᴀ ʙᴀsᴠᴜʀᴍᴀʏɪ ɪʜᴍᴀʟ ᴇᴛᴍᴇʏɪɴ . . !**
+● **Hər hansı bir problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz . . !**
 
-● **📚 ᴋᴏᴍᴜᴛʟᴀʀ ʙᴜᴛᴏɴᴜɴᴀ ᴛɪᴋʟᴀʏɪᴘ ᴛᴜᴍ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴏɢʀᴇɴɪɴ . . !**
+● **📚 Əmrlər butona basıb bütün əmrləri öyrənin . . !**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎉  ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ  🎉",
-                        url=f"https://t.me/LuksMusicroBot?startgroup=true",
+                        "🎉  Məni qrupa əlavə et  🎉",
+                        url=f"https://t.me/Bayramova_Music_Bot?startgroup=true",
                     )
                 ],
                 [
-                    InlineKeyboardButton("📚 ᴋᴏᴍᴜᴛʟᴀʀ", callback_data="cbcmds"),
-                    InlineKeyboardButton("💝 sᴀʜɪʙɪᴍ", url=f"https://t.me/ismayilzadevuqar"),
+                    InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
+                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/Bayramova_o5"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗯️ ᴅᴇsᴛᴇᴋ ɢʀᴜʙᴜ", url=f"https://t.me/NeonSUP"
+                        "💬 Söhbət Qrupu", url=f"https://t.me/Kinggame98"
                     ),
                     InlineKeyboardButton(
-                        "📣 ʙɪʟɢɪ ᴋᴀɴᴀʟɪ", url=f"https://t.me/LuksProject"
+                        "🥰 Kanalım", url=f"https://t.me/Xatireler_ebedidir"
                     ),
                 ],
             ]
@@ -103,15 +103,15 @@ async def alive(c: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📣 ᴅᴇsᴛᴇᴋ", url=f"https://t.me/NeonSUP"),
+                InlineKeyboardButton("📣 Dəstək", url=f"https://t.me/Kinggame98"),
                 InlineKeyboardButton(
-                    "🗯️ ʙɪʟɢɪ", url=f"https://t.me/LuksProject"
+                    "🗯️ Məlumat", url=f"https://t.me/Xatireler_ebedidir"
                 ),
             ]
         ]
     )
 
-    alive = f"**• ᴍᴇʀʜᴀʙᴀ {message.from_user.mention()} {BOT_NAME}**\n\n🧑🏼‍💻 sᴀʜɪʙɪᴍ: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 ʙᴏᴛ ᴠᴇʀsɪᴏɴ: `v{__version__}`\n🔥 ᴘʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ: `{pyrover}`\n🐍 ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: `{__python_version__}`\n✨ PʏTɢCᴀʟʟs ᴠᴇʀsɪᴏɴ: `{pytover.__version__}`\n🆙 ᴄᴀʟɪsᴍᴀ ᴅᴜʀᴜᴍᴜ: `{uptime}`\n\n❤ **Bᴇɴɪ ɢʀᴜʙᴀ ᴀʟᴅɪɢɪɴɪᴢ ɪᴄɪɴ ᴛᴇsᴇᴋᴋᴜʀʟᴇʀ . . !**"
+    alive = f"**• Salam {message.from_user.mention()} {BOT_NAME}**\n\n🧑🏼‍💻 Sahibim: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 Bot versiyası: `v{__version__}`\n🔥 Pragram versiyası: `{pyrover}`\n🐍 Python versiyası: `{__python_version__}`\n✨ PyTgCalls versiyası: `{pytover.__version__}`\n🆙 İşləmək durumu: `{uptime}`\n\n❤ **Məni qrupa əlavə etdiyiniz üçün təşəkkürlər . . !**"
 
     await c.send_photo(
         chat_id,
@@ -135,7 +135,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 ʙᴏᴛ ᴅᴜʀᴜᴍᴜ :\n"
+        "🤖 Bot vəziyyəti :\n"
         f"• ** ᴜᴘᴛɪᴍᴇ :** `{uptime}`\n"
         f"• ** ᴛɪᴍᴇ :** `{START_TIME_ISO}`"
     )
@@ -164,17 +164,17 @@ async def new_chat(c: Client, m: Message):
     for member in m.new_chat_members:
         if member.id == bot_id:
             return await m.reply(
-                "**❤️ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇᴅɪɢɪɴɪᴢ ɪᴄɪɴ ᴛᴇsᴇᴋᴋᴜʀʟᴇʀ . . ! !**\n\n"
-                "**Bᴇɴɪ ɢʀᴜʙᴛᴀ ʏᴏɴᴇᴛɪᴄɪ ʏᴀᴘɪɴ ᴠᴇ ᴀʀᴅɪɴᴅᴀɴ /katil ᴋᴏᴍᴜᴛᴜʏʟᴀ ᴀsɪsᴛᴀɴɪ ɢʀᴜʙᴀ ᴅᴀᴠᴇᴛ ᴇᴅɪɴ . . !\n\n**"
-                "**Tᴜᴍ ʙᴜɴʟᴀʀɪ ʏᴀᴘᴛɪᴋᴛᴀɴ sᴏɴʀᴀ /reload ᴋᴏᴍᴜᴛᴜɴᴜ ᴋᴜʟʟᴀɴɪɴ ᴠᴇ ʜᴇʀsᴇʏ ʜᴀᴢɪʀ ! ʙᴏᴛᴜ ᴋᴜʟʟᴀɴᴍᴀʏᴀ ʙᴀsʟɪʏᴀʙɪʟɪʀsɪɴɪᴢ . . .**",
+                "**❤️ Məni qrupa əlavə etdiyiniz üçün təşəkkürlər . . ! !**\n\n"
+                "**Məni qrupda admin et sonra  /katil əmr ilə Asistanı qrupa dəvət edin . . !\n\n**"
+                "**Bütün bunları etdikdən sonra  /reload Əmri istifadə edin və hərşey hazır ! Botu istifadə edə bilərsiniz 🥰 . . .**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 ʙɪʟɢɪ", url=f"https://t.me/LuksProject"),
-                            InlineKeyboardButton("🗯️ ᴅᴇsᴛᴇᴋ", url=f"https://t.me/NeonSUP")
+                            InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Xatireler_ebedidir"),
+                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/Kinggame98")
                         ],
                         [
-                            InlineKeyboardButton("🎙 ᴀsɪssᴛᴀɴ", url=f"https://t.me/LuksMudicAsistant")
+                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Bayramova_Music")
                         ]
                     ]
                 )
