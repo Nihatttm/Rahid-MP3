@@ -101,26 +101,23 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /bul => Musiqi yüklə.
+» /song => Musiqi yüklə.
 » /ara => Video yüklə.
 » /oynat => Musiqi oynat.
-» /izlet => Video oynat.
-
-» /durdur => Musiqi dayandır.
-» /devam => Musiqi davam et.
-» /atla => Musiqi keçin.
-» /son => Musiqi dayandır.
+» /vplay => Video oynat.
 » /lyrics => Mahnı sözlərini tap.
+
+» /resume => Musiqi davam et.
+» /skip => Sıra musiqini keçin.
+» /end => Musiqini dayandır.
 » /reload => Admin siyahısı yenilə.
 » /katil => Asistanı qrupa dəvət et.
-
-» /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
 » /playlist => Musiqi playlistə əlavə et.
 
 » /list => Sonrakı musiqi siyahını öyrən.
 
-Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰
+Məlumat : Bu əmrlər hərkəs üçündür ☑️
 
 **""",
         reply_markup=InlineKeyboardMarkup(
@@ -135,26 +132,23 @@ async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /bul => Musiqi yüklə.
+» /song => Musiqi yüklə.
 » /ara => Video yüklə.
 » /oynat => Musiqi oynat.
-» /izlet => Video oynat.
-
-» /durdur => Musiqi dayandır.
-» /devam => Musiqi davam et.
-» /atla => Musiqi keçin.
-» /son => Musiqi dayandır.
+» /vplay => Video oynat.
 » /lyrics => Mahnı sözlərini tap.
+
+» /resume => Musiqi davam et.
+» /skip => Sıra musiqini keçin.
+» /end => Musiqini dayandır.
 » /reload => Admin siyahısı yenilə.
 » /katil => Asistanı qrupa dəvət et.
-
-» /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
 » /playlist => Musiqi playlistə əlavə et.
 
 » /list => Sonrakı musiqi siyahını öyrən.
 
-Məlumat : Azərbaycan tərcüməsi əlavə olunub 🥰
+Məlumat : Bu əmrlər hərkəs üçündür ☑️
 
 **""",
         reply_markup=InlineKeyboardMarkup(
