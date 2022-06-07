@@ -75,14 +75,14 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
-                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/Rahid_2003"),
+                    InlineKeyboardButton("😍 Sahibəm", url=f"https://t.me/Bayramova_o5"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Söhbət Qrupu", url=f"https://t.me/Dark_Region"
+                        "💬 Söhbət Qrupu", url=f"https://t.me/Kinggame98"
                     ),
                     InlineKeyboardButton(
-                        "🥰 Kanalım", url=f"https://t.me/Rahid_44"
+                        "🥰 Kanalım", url=f"https://t.me/Xatireler_ebedidir"
                     ),
                 ],
             ]
@@ -170,11 +170,11 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Rahid_44"),
-                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/Dark_Region")
+                            InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Xatireler_ebedidir"),
+                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/Kinggame98")
                         ],
                         [
-                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Rahid_Asistan")
+                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Bayramova_Music")
                         ]
                     ]
                 )
