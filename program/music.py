@@ -111,7 +111,7 @@ async def play(c: Client, m: Message):
             )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("🔎 **Yüklənir...**")
+            suhu = await replied.reply("🔎 **Mahnı axtarılır zəhmət olmasa gözləyin...**")
             dl = await replied.download()
             link = replied.link
             
