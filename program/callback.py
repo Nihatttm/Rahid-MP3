@@ -103,7 +103,7 @@ async def cbbasic(_, query: CallbackQuery):
 
 » /song => Musiqi yüklə.
 » /ara => Video yüklə.
-» /oynat => Musiqi oynat.
+» /play => Musiqi oynat.
 » /vplay => Video oynat.
 » /lyrics => Mahnı sözlərini tap.
 
@@ -134,7 +134,7 @@ async def cbadmin(_, query: CallbackQuery):
 
 » /song => Musiqi yüklə.
 » /ara => Video yüklə.
-» /oynat => Musiqi oynat.
+» /play => Musiqi oynat.
 » /vplay => Video oynat.
 » /lyrics => Mahnı sözlərini tap.
 
