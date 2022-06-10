@@ -78,7 +78,7 @@ def song(_, message):
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 Mahnı yüklənir ...")
+        m.edit("📤 Mahnı yüklənir...")
         message.reply_audio(
             audio_file,
             caption=rep,
