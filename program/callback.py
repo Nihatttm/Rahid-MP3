@@ -101,7 +101,7 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /song => Musiqi yüklə.
+» /bul => Musiqi yüklə.
 » /ara => Video yüklə.
 » /play => Musiqi oynat.
 » /vplay => Video oynat.
@@ -132,7 +132,7 @@ async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /song => Musiqi yüklə.
+» /bul => Musiqi yüklə.
 » /ara => Video yüklə.
 » /play => Musiqi oynat.
 » /vplay => Video oynat.
