@@ -61,7 +61,7 @@ async def start_(client: Client, message: Message):
         f"""● **Salam 🙋🏻‍♀️ {message.from_user.mention()} **\n
 ● **Mən səsli söhbətlərdə musiqi botam 🥰**
 
-● **Hər hansı bir problemlə qarşılaşsanız @Kinggame98 qrupumuza gəlib yaza bilərsiniz!**
+● **Hər hansı bir problemlə qarşılaşsanız @AOBTEAM qrupumuza gəlib yaza bilərsiniz!**
 
 ● **📚 Əmrlər butona basıb bütün əmrləri öyrənin ⬇️**
 """,
@@ -79,7 +79,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Söhbət Qrupu", url=f"https://t.me/Kinggame98"
+                        "💬 Söhbət Qrupum", url=f"https://t.me/AOBTEAM"
                     ),
                     InlineKeyboardButton(
                         "🥰 Kanalım", url=f"https://t.me/Xatireler_ebedidir"
@@ -171,10 +171,10 @@ async def new_chat(c: Client, m: Message):
                     [
                         [
                             InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Xatireler_ebedidir"),
-                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/Kinggame98")
+                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/AOBTEAM")
                         ],
                         [
-                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Bayramova_Music")
+                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Bayramova_Musiqi")
                         ]
                     ]
                 )
