@@ -60,7 +60,7 @@
         "GROUP_SUPPORT": {
             "description": "Grup kullanıcı adı @ olmadan yazınız.",
             "required": true,
-            "value": "Kinggame98"
+            "value": "AOBTEAM"
         },
         "UPDATES_CHANNEL": {
             "description": "Kanal kullanıcı adı @ olmadan yazınız.",
