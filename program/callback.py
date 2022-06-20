@@ -21,7 +21,7 @@ async def cbstart(_, query: CallbackQuery):
         f"""● **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **\n
 ● **Mən səsli söhbətlərdə musiqi botam 🥰**
 
-● **Hər hansı problemlə qarşılaşsanız @Kinggame98 qrupumuza gəlib bildirə bilərsiniz!**
+● **Hər hansı problemlə qarşılaşsanız @AOBTEAM qrupumuza gəlib bildirə bilərsiniz!**
 
 ● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin ⬇️**""",
         reply_markup=InlineKeyboardMarkup(
