@@ -204,5 +204,5 @@ async def cbmenu(_, query: CallbackQuery):
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Səsli söhbəti idarə etmək icazəsi olan admin yalnız bu düyməyə toxuna bilər!", show_alert=True)
+        return await query.answer("💡 Səsli söhbəti idarə etmək icazəsi olan admin yalnız bu düyməni basa bilər!", show_alert=True)
     await query.message.delete()
