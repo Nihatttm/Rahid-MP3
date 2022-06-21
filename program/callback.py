@@ -117,7 +117,7 @@ async def cbbasic(_, query: CallbackQuery):
 
 » /list => Sonrakı musiqi siyahını öyrən.
 
-Məlumat: Bu əmrlər hərkəs üçündür ☑️
+Məlumat: Bu əmrləri hərkəs istifadə edə bilər ☑️
 
 **""",
         reply_markup=InlineKeyboardMarkup(
