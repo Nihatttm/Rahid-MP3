@@ -63,7 +63,7 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ Şarkı bulunamadı.\n\nzəhmət olmasa düzgün mahnı adı yazın !")
+        m.edit("❌ Mahnı tapılmadı.\n\nzəhmət olmasa düzgün mahnı adı yazın !")
         print(str(e))
         return
     m.edit("📥 Mahnı yüklənir...")
