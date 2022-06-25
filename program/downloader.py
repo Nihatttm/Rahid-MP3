@@ -170,9 +170,9 @@ async def get_lyric_genius(_, message: Message):
     if S is None:
         return await m.edit("❌ `404` Mahnı sözləri tapılmadı")
     xxx = f"""
-**Mahnı:** {query}
+**Sorğu:** {query}
 **Sənətçi:** {S.artist}
-**Mahnı sözü:**
+**Mahnı sözləri:**
 {S.lyrics}"""
     if len(xxx) > 4096:
         await m.delete()
