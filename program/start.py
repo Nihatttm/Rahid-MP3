@@ -70,19 +70,19 @@ async def start_(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "Məni qrupa əlavə et 🥳",
-                        url=f"https://t.me/Bayramova_Music_Bot?startgroup=true",
+                        url=f"https://t.me/AxhmedovRobot?startgroup=true",
                     )
                 ],
                 [
                     InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
-                    InlineKeyboardButton("😍 Sahibəm", url=f"https://t.me/Bayramova_o5"),
+                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/Axhmedov"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Söhbət Qrupum", url=f"https://t.me/AOBTEAM"
+                        "🦅 Support", url=f"https://t.me/Axhmedov13"
                     ),
                     InlineKeyboardButton(
-                        "🥰 Kanalım", url=f"https://t.me/Xatireler_ebedidir"
+                        "🇹🇷 Kanalım", url=f"https://t.me/Axhmedovs"
                     ),
                 ],
             ]
@@ -105,7 +105,7 @@ async def alive(c: Client, message: Message):
             [
                 InlineKeyboardButton("📣 Dəstək", url=f"https://t.me/Kinggame98"),
                 InlineKeyboardButton(
-                    "🗯️ Məlumat", url=f"https://t.me/Xatireler_ebedidir"
+                    "🗯️ Məlumat", url=f"https://t.me/Axhmedovs"
                 ),
             ]
         ]
@@ -170,11 +170,11 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Xatireler_ebedidir"),
-                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/AOBTEAM")
+                            InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Axhmedovs"),
+                            InlineKeyboardButton("🦅 Dəstək", url=f"https://Axhmedov13")
                         ],
                         [
-                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Bayramova_Musiqi")
+                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Axhmedov11")
                         ]
                     ]
                 )
